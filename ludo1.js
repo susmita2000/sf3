@@ -116,12 +116,284 @@ ctx.fillStyle="lightblue";
 ctx.fill();
 
 }
+function movea11()
+{
+  if(pre==0)
+  {
+    
+       if(p11.y==9){
+        p11.x=p11.x-d;
+        
+        if(p11.x<0)
+        {
+          var t=0-p11.x;
+          p11.y=p11.y-t;
+          p11.x=0;
+          
+        }
+       }
+      else if(p11.x==0&&p11.y!=0)
+      {
+        p11.y=p11.y-d;
+        
+      }
+
+
+
+      else{
+      p11.x=p11.x+d;
+    
+    if(p11.x>=9&&p11.y!=9)
+    {
+      var t=p11.x-9;
+      p11.x=9;
+      p11.y=p11.y+t;
+      
+
+    }
+     if(p11.y>=9)
+    {
+      var t=p11.y-9;
+      p11.y=9;
+      p11.x=p11.x-t;
+      
+    }
+  }
+  
+    pre=pre+1;
+    if(p11.x==p21.x&&p11.y==p21.y)
+    {
+      p21.x=40;
+      p21.y=40;
+      locker2=locker2+1;
+    }
+    if(p11.x==p22.x&&p11.y==p22.y)
+    {
+      p22.x=40;
+      p22.y=40;
+      locker2=locker2+1;
+    }
+    if(p11.x==0&&p11.y<=1)
+    {
+      score1=score1+1;
+      p11.x=30;
+    }
+  
+  }
+  document.getElementById("loc1").disabled = true;
+document.getElementById("loc2").disabled = true;
+if(pre!=0)
+{
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+}
+function movea12()
+{
+  if(pre==0)
+  {
+        if(p12.y==9){
+        p12.x=p12.x-d;
+        if(p12.x<0)
+        {
+          var t=0-p12.x;
+          p12.y=p12.y-t;
+          p12.x=0;
+        }
+       }
+      else if(p12.x==0&&p12.y!=0)
+      {
+        p12.y=p12.y-d
+      }
+
+
+
+      else{
+      p12.x=p12.x+d;
+    
+    if(p12.x>=9&&p12.y!=9)
+    {
+      var t=p12.x-9;
+      p12.x=9;
+      p12.y=p12.y+t;
+
+    }
+     if(p12.y>=9)
+    {
+      var t=p12.y-9;
+      p12.y=9;
+      p12.x=p12.x-t;
+    }
+  }
+    pre=pre+1;
+    if(p12.x==p21.x&&p12.y==p21.y)
+    {
+      p21.x=40;
+      p21.y=40;
+      locker2=locker2+1;
+    }
+    if(p12.x==p22.x&&p12.y==p22.y)
+    {
+      p22.x=40;
+      p22.y=40;
+      locker2=locker2+1;
+    }
+    if(p12.x==0&&p12.y<=1)
+    {
+      score1=score1+1;
+      p12.x=30;
+    }
+  }
+  document.getElementById("loc1").disabled = true;
+document.getElementById("loc2").disabled = true;
+if(pre!=0)
+{
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+}
+function movea21()
+{
+  if(pre==0)
+   {
+    
+    if(p21.y==0)
+    {
+      p21.x=p21.x+d;
+      if(p21.x>9)
+      {
+        var t=p21.x-9;
+        p21.y=p21.y+t;
+        p21.x=9
+      }
+    }
+    else if(p21.x==0&&p21.y!=0)
+    {
+      p21.y=p21.y-d;
+      if(p21.y<0)
+      {
+        var t=0-p21.y;
+        p21.x=p21.x+t;
+        p21.y=0;
+      }
+    }
+    else{
+      p21.x=p21.x-d;
+      if(p21.x<0)
+      {
+        var t=0-p21.x;
+        p21.x=0;
+        p21.y=p21.y-t;
+      }
+      else if(p21.x<9&&p21.y!=0&&p21.y!=9)
+      {
+        var t=9-p21.x;
+        p21.x=9;
+        p21.y=p21.y+t;
+      }
+    }
+
+
+ pre=pre+1;
+ if(p21.x==p11.x&&p21.y==p11.y)
+    {
+      p11.x=40;
+      p11.y=40;
+      locker1=locker1+1;
+    }
+    if(p21.x==p12.x&&p21.y==p12.y)
+    {
+      p12.x=40;
+      p12.y=40;
+      locker1=locker1+1;
+    }
+    if(p21.x==9&&p21.y>=8)
+    {
+      score2=score2+1;
+      p21.x=30;
+    }
+  
+  }
+  document.getElementById("loc1").disabled = true;
+document.getElementById("loc2").disabled = true;
+if(pre!=0)
+{
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+}
+function movea22()
+{
+  if(pre==0)
+  {
+    if(p22.y==0)
+    {
+      p22.x=p22.x+d;
+      if(p22.x>9)
+      {
+        var t=p22.x-9;
+        p22.y=p22.y+t;
+        p22.x=9
+      }
+    }
+    else if(p22.x==0&&p22.y!=0)
+    {
+      p22.y=p22.y-d;
+      if(p22.y<0)
+      {
+        var t=0-p22.y;
+        p22.x=p22.x+t;
+        p22.y=0;
+      }
+    }
+    else{
+      p22.x=p22.x-d;
+      if(p22.x<0)
+      {
+        var t=0-p22.x;
+        p22.x=0;
+        p22.y=p22.y-t;
+      }
+      else if(p22.x<9&&p22.y!=0&&p22.y!=9)
+      {
+        var t=9-p22.x;
+        p22.x=9;
+        p22.y=p22.y+t;
+      }
+    }
+    pre=pre+1;
+    if(p22.x==9&&p22.y>=8)
+    {
+      score2=score2+1;
+      p22.x=30;
+    }
+   if(p22.x==p11.x&&p22.y==p11.y)
+    {
+      p11.x=40;
+      p11.y=40;
+      locker1=locker1+1;
+    }
+    if(p22.x==p12.x&&p22.y==p12.y)
+    {
+      p12.x=40;
+      p12.y=40;
+      locker1=locker1+1;
+    }
+  }
+  document.getElementById("loc1").disabled = true;
+document.getElementById("loc2").disabled = true;
+if(pre!=0)
+{
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+}
 function user()
 {
   d = document.getElementById("myText").value;
   u=1;
 }
-function free1()
+function free12()
 {
 	ini2();
 	pre++;
@@ -131,7 +403,41 @@ function free1()
 	document.getElementById("myBtn").disabled = false;
   document.getElementById("use").disabled = false;
 }
+function free1()
+{
+if(p11.x==40)
+  free11();
+else if(p12.x==40)
+  free12();
+}
 function free2()
+{
+if(p21.x==40)
+  free21();
+else if(p22.x==40)
+  free22();
+}
+function free11()
+{
+  ini1();
+  pre++;
+  drawpiece(p11.x,p11.y,1);
+  locker1=0;
+  document.getElementById("loc1").disabled = true;
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+function free12()
+{
+  ini2();
+  pre++;
+  drawpiece(p12.x,p12.y,1);
+  locker1=0;
+  document.getElementById("loc1").disabled = true;
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+function free22()
 {
 	ini4();
 	
@@ -140,6 +446,17 @@ function free2()
 	locker2=0;
 	document.getElementById("loc2").disabled = true;
 	document.getElementById("myBtn").disabled = false;
+  document.getElementById("use").disabled = false;
+}
+function free21()
+{
+  ini3();
+  
+  pre++;
+  drawpiece(p21.x,p21.y,2);
+  locker2=0;
+  document.getElementById("loc2").disabled = true;
+  document.getElementById("myBtn").disabled = false;
   document.getElementById("use").disabled = false;
 }
 function dice()
@@ -191,15 +508,52 @@ else if(moves%2==0&&locker2==2&&d==6)
   document.getElementById("use").disabled = false;
 
 }
-else if(moves%2==1&&locker1==1&&d==6)
+else if(moves%2==1&&locker1==1&&d==6&&p12.x==40)
 {
 	 document.getElementById("loc1").disabled = false;
    
 }
-else if(moves%2==0&&locker2==1&&d==6)
+else if(moves%2==1&&locker1==1&&d==6&&p11.x==40)
+{
+   document.getElementById("loc1").disabled = false;
+   
+}
+else if(moves%2==0&&locker2==1&&d==6&&p22.x==40)
 {
 	 document.getElementById("loc2").disabled = false;
    
+}
+else if(moves%2==0&&locker2==1&&d==6&&p21.x==40)
+{
+   document.getElementById("loc2").disabled = false;
+   
+}
+if((moves%2==0&&locker2==1&&d!=6&&score2!=1)||( moves%2==0&&score2==1&&locker2==0))
+{
+  if(p21.x<10&&p21.y<10)
+  {
+    movea21();
+  }
+
+  else if(p22.x<10&&p22.y<10)
+  {
+     movea22();
+  }
+}
+else if((moves%2==1&&locker1==1&&d!=6&&score1!=1)||(moves%2==1&&score1==1&&locker1==0))
+{
+if(p11.x<10&&p11.y<10)
+  {
+    movea11();
+  }
+
+  else if(p12.x<10&&p12.y<10)
+  {
+     movea12();
+  }
+
+
+
 }
  if(moves%2==1&&locker1==1&&score1==1&&d!=6)
  {
@@ -207,7 +561,7 @@ else if(moves%2==0&&locker2==1&&d==6)
   document.getElementById("use").disabled = false;
   pre++;
  }
- if(moves%2==2&&locker2==1&&score2==1&&d!=6)
+ if(moves%2==0&&locker2==1&&score2==1&&d!=6)
  {
   document.getElementById("myBtn").disabled = false;
   document.getElementById("use").disabled = false;
@@ -245,7 +599,9 @@ else if(d==6)
 	ctx.drawImage(img1,4*box,4*box,2*box,2*box);
 }
 
-
+console.log(p11.x);
+console.log(p11.y);
+console.log(" ");
 
 }
 
@@ -485,11 +841,10 @@ if(check(pos,p21)&&pre==0)
   		}
   	}
     pre=pre+1;
-    if(p12.x==p21.x&&p12.y==p21.y)
+    if(p22.x==9&&p22.y>=8)
     {
-      p21.x=40;
-      p21.y=40;
-      locker2=locker2+1;
+      score2=score2+1;
+      p22.x=30;
     }
    if(p22.x==p11.x&&p22.y==p11.y)
     {
